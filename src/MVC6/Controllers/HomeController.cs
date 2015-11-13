@@ -35,8 +35,14 @@ namespace MVC6.Controllers
         }
 
         //public List<Cartitem> Remove(Cartitem cartItem)
-        public List<Cartitem> Remove(Cartitem cartItem)
+        public List<Cartitem> Remove(string Product, int Quantity, double Price)
         {
+            var cartItem = new Cartitem
+            {
+                Price = Price,
+                Product = Product,
+                Quantity = Quantity
+            };
             var item = cart.FirstOrDefault(c => c.Product == cartItem.Product);
             if (item != null)
             {

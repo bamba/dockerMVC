@@ -49,7 +49,7 @@
 
             $http({
                 method: 'POST',
-                url: '/home/Remove',
+                url: '/home/Remove?Product='+productName,
                 data: item
             }).success(function () {
                 for (var i = 0; i < cartModel.cartItems.length; i++) {
