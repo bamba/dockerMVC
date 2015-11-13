@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html ng-app="cartApp">
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+
+    <script src="~/lib/angular/angular.min.js"></script>
+    <script src="~/lib/angular-route/angular-route.min.js"></script>
+
+    <environment names="Development">
+        <script src="~/app/cartApp.js"></script>
+        <script src="~/app/cartController.js"></script>
+        <script src="~/app/cartFilter.js"></script>
+        <script src="~/app/cartModel.js"></script>
+        <script src="~/app/cartService.js"></script>
+    </environment>
+
+    <environment names="Production,Staging">
+        <script src="~/lib/_app/cartApp.js"></script>
+        <script src="~/lib/_app/cartController.js"></script>
+        <script src="~/lib/_app/cartFilter.js"></script>
+        <script src="~/lib/_app/cartModel.js"></script>
+        <script src="~/lib/_app/cartService.js"></script>
+    </environment> 
+
+</head>
+<body>
+    <nav role="navigation" class="navbar navbar-default">
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a href="/#/editCart">Cart Edit</a></li>
+                <li><a href="/#/myCart">Cart View</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div ng-view></div>
+
+</body>
+</html>
